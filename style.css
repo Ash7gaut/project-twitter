@@ -1,0 +1,108 @@
+body {
+  background-color: aliceblue;
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.border-bg {
+  display: flex;
+  max-width: 1000px;
+  margin: auto;
+  margin-top: 110px;
+  border: 1px solid rgb(175, 175, 175);
+  height: 460px;
+
+}
+
+.left {
+  width: 50%;
+}
+
+.twitter {
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.logo {
+  max-width: 13%;
+  max-height: 13%;
+}
+
+.right {
+  width: 50%;
+  text-align: left;
+  margin-left: 20px;
+}
+
+.other-page {
+  display: flex;
+  align-items: center;
+
+}
+
+.login p,
+.login a {
+  margin-top: 40px;
+  font-size: 25px;
+  font-weight: 700px;
+}
+
+.other-page a {
+  margin-left: 220px;
+  padding: 10px 20px;
+  background-color: #1C9BEF;
+  color: white;
+  border-radius: 15px;
+  text-decoration: none;
+  font-size: 13px;
+}
+
+
+form label {
+  display: block;
+  margin-top: 40px;
+}
+
+input {
+  border-radius: 13px;
+  border: 0;
+  background-color: white;
+  border: 1px solid grey;
+  padding: 10px 20px;
+  width: 200px;
+}
+
+button {
+  display: block;
+  margin-top: 40px;
+  background-color: #1C9BEF;
+  margin-left: 140px;
+  color: white;
+  border: 0;
+  border-radius: 15px;
+  padding: 10px 29px;
+}
+
+.rand {
+  font-size: 15px;
+  margin-bottom: 5px;
+  color: rgb(79, 79, 79);
+}
+
+/* Partie Home.php */
+
+.back {
+  text-align: center;
+  font-size: 30px;
+}
+
+.btn-back {
+  display: flex;
+  margin: auto;
+  max-width: 150px;
+  justify-content: center;
+  text-decoration: none;
+  color: white;
+  background-color: #1C9BEF;
+  border-radius: 20px;
+  padding: 10px 30px;
+}
