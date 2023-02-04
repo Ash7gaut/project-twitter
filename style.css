@@ -10,7 +10,7 @@ body {
   display: flex;
   max-width: 1000px;
   margin: auto;
-  margin-top: 110px;
+  margin-top: 120px;
   height: 460px;
   background-color: aliceblue;
 
@@ -24,6 +24,7 @@ body {
   max-width: 100%;
   max-height: 100%;
   user-select: none;
+  display: block;
 }
 
 .logo {
@@ -77,7 +78,7 @@ input {
   width: 200px;
 }
 
-button {
+.next {
   display: block;
   margin-top: 40px;
   background-color: #1C9BEF;
@@ -96,10 +97,6 @@ button {
 
 /* Partie Home.php */
 
-.back {
-  text-align: center;
-  font-size: 30px;
-}
 
 .btn-back {
   display: flex;
@@ -111,4 +108,94 @@ button {
   background-color: #1C9BEF;
   border-radius: 20px;
   padding: 10px 30px;
+}
+
+.total {
+  color: white;
+}
+
+.whats-new {
+  display: flex;
+  height: 130px;
+  border: 1px solid rgb(176, 176, 176);
+  max-width: 960px;
+  margin: auto;
+  margin-bottom: 20px;
+  padding: 10px 50px;
+  margin-top: 50px;
+}
+
+.new-tweets {
+  display: flex;
+  height: 150px;
+  border: 1px solid rgb(176, 176, 176);
+  max-width: 960px;
+  margin: auto;
+  padding: 20px 50px;
+}
+
+.pp {
+  display: flex;
+  justify-content: center;
+  /* border: 1px solid red; */
+  width: 10%;
+}
+
+.pp img {
+  margin-top: 10px;
+  border-radius: 200px;
+  height: 70%;
+}
+
+.content {
+  margin-left: 20px;
+  /* border: 1px solid orange; */
+  width: 90%;
+  font-size: 18px;
+}
+
+.div-button {
+  display: flex;
+  justify-content: end;
+}
+
+.tweeter {
+  background-color: #1C9BEF;
+  color: white;
+  height: 40px;
+  padding: 10px 30px;
+  border: 0;
+  border-radius: 20px;
+  font-size: 18px;
+
+
+}
+
+.icon {
+  display: flex;
+  justify-content: space-between;
+  max-width: 470px;
+}
+
+.icon .comments,
+.like,
+.share {
+  width: 1.5vw;
+}
+
+.icon .retweet {
+  width: 2.3vw;
+
+}
+
+input {
+  border: 0;
+  background: none;
+  resize: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 0;
+  font-family: "Atyp Display";
+  outline: none;
+  width: 80%;
 }

@@ -194,7 +194,7 @@ if(isset($_POST["email"], $_POST["password"])) {
           <label class="rand" for="password">Mot de passe</label>
           <input type="password" id="password" name="password"/>
 
-          <button type="submit">Suivant</button>
+          <button class="next" type="submit">Suivant</button>
         </form>
       </div>
     </div>
