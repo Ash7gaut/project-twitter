@@ -1,101 +1,9 @@
 body {
-  background-image: url(images/background.jpg);
-  /* font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif; */
+  background-color: rgb(11, 11, 11);
   font-family: "Atyp Display";
   margin: 0;
-  overflow: hidden;
+  overflow-x: hidden;
 }
-
-.border-bg {
-  display: flex;
-  max-width: 1000px;
-  margin: auto;
-  margin-top: 120px;
-  height: 460px;
-  background-color: aliceblue;
-
-}
-
-.left {
-  width: 50%;
-}
-
-.twitter {
-  max-width: 100%;
-  max-height: 100%;
-  user-select: none;
-  display: block;
-}
-
-.logo {
-  max-width: 13%;
-  max-height: 13%;
-}
-
-.right {
-  width: 50%;
-  text-align: left;
-  margin-left: 20px;
-  background-color: aliceblue;
-
-}
-
-.other-page {
-  display: flex;
-  align-items: center;
-
-}
-
-.login p,
-.login a {
-  margin-top: 40px;
-  font-size: 25px;
-  font-weight: 700px;
-}
-
-.other-page a {
-  margin-left: 220px;
-  padding: 10px 20px;
-  background-color: #1C9BEF;
-  color: white;
-  border-radius: 15px;
-  text-decoration: none;
-  font-size: 13px;
-}
-
-
-form label {
-  display: block;
-  margin-top: 40px;
-}
-
-.input-start {
-  border-radius: 13px;
-  border: 0;
-  background-color: white;
-  border: 1px solid grey;
-  padding: 10px 20px;
-  width: 200px;
-}
-
-.next {
-  display: block;
-  margin-top: 40px;
-  background-color: #1C9BEF;
-  margin-left: 140px;
-  color: white;
-  border: 0;
-  border-radius: 15px;
-  padding: 10px 29px;
-}
-
-.rand {
-  font-size: 15px;
-  margin-bottom: 5px;
-  color: rgb(79, 79, 79);
-}
-
-/* Partie Home.php */
 
 
 .btn-back {
@@ -188,7 +96,7 @@ form label {
 
 }
 
-.input-home {
+input {
   border: 0;
   background: none;
   resize: none;

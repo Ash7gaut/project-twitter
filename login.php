@@ -191,10 +191,10 @@
         </div>
         <form action="login.php" method="post">
           <label class="rand" for="email">Email</label>
-          <input type="email" id="email" name="email"/>
+          <input type="email" class="input-start" id="email" name="email"/>
 
           <label class="rand" for="password">Mot de passe</label>
-          <input type="password" id="password" name="password"/>
+          <input type="password" class="input-start" id="password" name="password"/>
 
           <button class="next" type="submit">Suivant</button>
         </form>

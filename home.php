@@ -28,7 +28,7 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="home.css">
   <title>En construction...</title>
 </head>
 <body>
@@ -43,7 +43,7 @@
       </div> 
       <div class="content">
       <form action="home.php" method="post">
-        <input type="text" id="title" name="title" required value="Quoi de neuf ?" onblur="javascript:msg_input()" onfocus="javascript:clean_input()"></input>
+        <input type="text" class="input-home" id="title" name="title" required value="Quoi de neuf ?" onblur="javascript:msg_input()" onfocus="javascript:clean_input()"></input>
         <div class="div-button">
           <button class="tweeter" type="submit">Tweeter</button>
         </div>

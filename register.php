@@ -13,7 +13,7 @@ if(isset($_POST["email"], $_POST["password"])) {
         catch(Exception $e) {
             die('Erreur : '.$e->getMessage());
         }
-        $query = "INSERT INTO register(email, password) VALUES (:email, :password);";
+        $query = "INSERT INTO User(email, password) VALUES (:email, :password);";
 
         try {
           $q = $db->prepare($query);
@@ -189,10 +189,10 @@ if(isset($_POST["email"], $_POST["password"])) {
         </div>
         <form action="register.php" method="post">
           <label class="rand" for="email">Email</label>
-          <input type="email" id="email" name="email"/>
+          <input type="email" class="input-start" id="email" name="email"/>
 
           <label class="rand" for="password">Mot de passe</label>
-          <input type="password" id="password" name="password"/>
+          <input type="password" class="input-start" id="password" name="password"/>
 
           <button class="next" type="submit">Suivant</button>
         </form>
