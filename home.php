@@ -45,7 +45,7 @@
                 </div> 
                 <div class="content">
                 <form action="home.php" method="post">
-                  <input type="text" class="input-home" id="title" name="title" required value="Quoi de neuf ?" onblur="javascript:msg_input()" onfocus="javascript:clean_input()"></input>
+                  <textarea cols="80" rows="2" id="signature" onblur="javascript:msg_input()" onfocus="javascript:clean_input()">Quoi de neuf ?</textarea>
                   <div class="div-button">
                     <button class="tweeter" type="submit">Tweeter</button>
                   </div>

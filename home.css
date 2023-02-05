@@ -32,6 +32,18 @@ body {
 
 }
 
+textarea {
+  border: 0;
+  background: none;
+  resize: none;
+  color: white;
+  font-size: 18px;
+  padding: 10px 0;
+  font-family: "Atyp Display";
+  outline: none;
+
+}
+
 
 .total {
   display: flex;
@@ -42,7 +54,7 @@ body {
 .body-left {
   display: flex;
   border: 1px solid blue;
-  width: 15%;
+  width: 14%;
 }
 
 .body-right {
