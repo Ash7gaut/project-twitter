@@ -35,41 +35,39 @@
   <!-- <a class="btn-back" href="login.php">Clique moi!</a> -->
 
   <section class="total">
+      <a href="profile.php" class="edit">Éditer le profil</a>
+          <div class="whats-new">
+            <div class="pp">
+              <img class="user-pp" src="<?=  $test[0]['profilePicture'] ?>">
+            </div> 
+            <div class="content">
+            <form action="home.php" method="post">
+              <input type="text" class="input-home" id="title" name="title" required value="Quoi de neuf ?" onblur="javascript:msg_input()" onfocus="javascript:clean_input()"></input>
+              <div class="div-button">
+                <button class="tweeter" type="submit">Tweeter</button>
+              </div>
+            </form>
+            </div>
+          </div>  
+        <?php 
+          for ($i = 0; $i < count($test); $i++) {
+        ?>  
 
-    <a href="profile.php" class="edit">Éditer le profil</a>
-      <div class="whats-new">
-        <div class="pp">
-          <img class="user-pp" src="<?=  $test[0]['profilePicture'] ?>">
-        </div> 
-        <div class="content">
-        <form action="home.php" method="post">
-          <input type="text" class="input-home" id="title" name="title" required value="Quoi de neuf ?" onblur="javascript:msg_input()" onfocus="javascript:clean_input()"></input>
-          <div class="div-button">
-            <button class="tweeter" type="submit">Tweeter</button>
+        <div class="new-tweets">
+          <div class="pp">
+            <img class="tweet-pp" src="<?=  $test[$i]['profilePicture'] ?>">
           </div>
-        </form>
+
+          <div class="content">
+            <p> <?php echo $test[$i]['text'] ?> </p>
+            <div class="icon"> 
+              <img class="comments" src="images/comments.svg">
+              <img class="retweet" src="images/retweet.svg">
+              <img class="like" src="images/likes.svg">
+              <img class="share" src=images/share.svg>
+            </div>
+          </div>
         </div>
-      </div>  
-    <?php 
-      for ($i = 0; $i < count($test); $i++) {
-    ?>  
-
-    <div class="new-tweets">
-      <div class="pp">
-        <img class="tweet-pp" src="<?=  $test[$i]['profilePicture'] ?>">
-      </div>
-
-      <div class="content">
-        <p> <?php echo $test[$i]['text'] ?> </p>
-        <div class="icon"> 
-          <img class="comments" src="images/comments.svg">
-          <img class="retweet" src="images/retweet.svg">
-          <img class="like" src="images/likes.svg">
-          <img class="share" src=images/share.svg>
-        </div>
-      </div>
-
-    </div>
     <?php
   }
   

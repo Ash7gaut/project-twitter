@@ -184,7 +184,7 @@ if(isset($_POST["email"], $_POST["password"])) {
       <div class="right">
         <img class="logo" src="images/logo.png">
         <div class="other-page">
-          <p>S'inscrire</p>
+          <p class="title">S'inscrire</p>
           <a href="login.php">Se connecter</a>
         </div>
         <form action="register.php" method="post">

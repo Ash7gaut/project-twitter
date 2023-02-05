@@ -19,7 +19,7 @@ body {
 }
 
 .edit {
-  display: flex;
+  display: block;
   text-decoration: none;
   border: 1px solid rgb(255, 255, 255);
   color: white;
@@ -28,7 +28,6 @@ body {
   height: 20px;
   font-family: "Atyp Display";
   margin-left: 20px;
-  margin-top: 50px;
   width: 103px;
 
 }
@@ -38,6 +37,7 @@ body {
   color: white;
 }
 
+
 .whats-new {
   display: flex;
   height: 130px;
@@ -46,7 +46,7 @@ body {
   margin: auto;
   margin-bottom: 20px;
   margin-top: 50px;
-  padding: 10px 50px;
+  padding: 10px 30px;
 }
 
 .new-tweets {
@@ -55,7 +55,7 @@ body {
   border: 1px solid rgb(148, 148, 148);
   max-width: 760px;
   margin: auto;
-  padding: 20px 50px;
+  padding: 20px 30px;
 }
 
 .pp {
@@ -72,6 +72,7 @@ body {
 }
 
 .tweet-pp {
+  margin-top: 20px;
   height: 60.67%;
   border-radius: 200px;
 }
@@ -104,6 +105,7 @@ body {
   display: flex;
   justify-content: space-between;
   max-width: 470px;
+  align-items: flex-end;
 }
 
 .icon .comments,

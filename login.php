@@ -186,7 +186,7 @@
       <div class="right">
         <img class="logo" src="images/logo.png">
         <div class="other-page">
-          <p>Se connecter</p>
+          <p class="title">Connexion</p>
           <a href="register.php">S'inscrire</a>
         </div>
         <form action="login.php" method="post">
