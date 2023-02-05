@@ -34,7 +34,21 @@ body {
 
 
 .total {
+  display: flex;
   color: white;
+  border: 1px solid red;
+}
+
+.body-left {
+  display: flex;
+  border: 1px solid blue;
+  width: 15%;
+}
+
+.body-right {
+  display: flex;
+  border: 1px solid orange;
+  width: 85%;
 }
 
 
