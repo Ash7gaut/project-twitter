@@ -18,6 +18,22 @@ body {
   padding: 10px 30px;
 }
 
+.edit {
+  display: flex;
+  text-decoration: none;
+  border: 1px solid rgb(255, 255, 255);
+  color: white;
+  border-radius: 15px;
+  padding: 10px 16px;
+  height: 20px;
+  font-family: "Atyp Display";
+  margin-left: 20px;
+  margin-top: 50px;
+  width: 103px;
+
+}
+
+
 .total {
   color: white;
 }
@@ -26,18 +42,18 @@ body {
   display: flex;
   height: 130px;
   border: 1px solid rgb(176, 176, 176);
-  max-width: 960px;
+  max-width: 760px;
   margin: auto;
   margin-bottom: 20px;
-  padding: 10px 50px;
   margin-top: 50px;
+  padding: 10px 50px;
 }
 
 .new-tweets {
   display: flex;
   height: 150px;
   border: 1px solid rgb(176, 176, 176);
-  max-width: 960px;
+  max-width: 760px;
   margin: auto;
   padding: 20px 50px;
 }
@@ -49,10 +65,15 @@ body {
   width: 10%;
 }
 
-.pp img {
+.user-pp {
   margin-top: 10px;
   border-radius: 200px;
   height: 70%;
+}
+
+.tweet-pp {
+  height: 60.67%;
+  border-radius: 200px;
 }
 
 .content {

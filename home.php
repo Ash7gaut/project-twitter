@@ -29,36 +29,34 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="home.css">
-  <title>En construction...</title>
+  <title>Twitter</title>
 </head>
 <body>
   <!-- <a class="btn-back" href="login.php">Clique moi!</a> -->
 
   <section class="total">
 
-    <div class="whats-new">
-
-      <div class="pp">
-        <img src="<?=  $test[0]['profilePicture'] ?>">
-      </div> 
-      <div class="content">
-      <form action="home.php" method="post">
-        <input type="text" class="input-home" id="title" name="title" required value="Quoi de neuf ?" onblur="javascript:msg_input()" onfocus="javascript:clean_input()"></input>
-        <div class="div-button">
-          <button class="tweeter" type="submit">Tweeter</button>
+    <a href="profile.php" class="edit">Éditer le profil</a>
+      <div class="whats-new">
+        <div class="pp">
+          <img class="user-pp" src="<?=  $test[0]['profilePicture'] ?>">
+        </div> 
+        <div class="content">
+        <form action="home.php" method="post">
+          <input type="text" class="input-home" id="title" name="title" required value="Quoi de neuf ?" onblur="javascript:msg_input()" onfocus="javascript:clean_input()"></input>
+          <div class="div-button">
+            <button class="tweeter" type="submit">Tweeter</button>
+          </div>
+        </form>
         </div>
-      </form>
-
-      </div>
-    </div>
-
+      </div>  
     <?php 
       for ($i = 0; $i < count($test); $i++) {
     ?>  
 
     <div class="new-tweets">
       <div class="pp">
-        <img src="<?=  $test[$i]['profilePicture'] ?>">
+        <img class="tweet-pp" src="<?=  $test[$i]['profilePicture'] ?>">
       </div>
 
       <div class="content">
