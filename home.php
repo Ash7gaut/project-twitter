@@ -11,7 +11,7 @@
               die('Erreur : '.$e->getMessage());
           }
   
-          $query = "SELECT profilePicture FROM test";
+          $query = "SELECT profilePicture, text FROM test";
 
         $result = $db->prepare($query);
         $result->execute();
@@ -60,7 +60,7 @@
       </div>
 
       <div class="content">
-        <p>A dream of Spring. The North Remembers. The bear and the maiden fair. House Tarly of Horn Hill Winter is coming. The War of the 5 kings. House Tarly of Horn Hill Never Resting. Unbowed, Unbent, Unbroken. A forked purple lightning bolt, on black field speckled with four-pointed stars.</p>
+        <p> <?php echo $test[$i]['text'] ?> </p>
         <div class="icon"> 
           <img class="comments" src="images/comments.svg">
           <img class="retweet" src="images/retweet.svg">
