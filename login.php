@@ -1,36 +1,42 @@
 <?php
 
+session_start();
+
   try {
     $db = new PDO("mysql:host=localhost;dbname=twitter;port=8889", "root", "root");
     $db->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     } catch (Exception $e) {
       echo $e->getMessage();
     } 
+
     if (isset($_POST["email"]) AND isset($_POST["password"]))
     {
         if (!empty($_POST["email"]) AND !empty($_POST["password"]))
         {
-            $pseudo = $_POST["email"];
-            $req = $bdd->prepare("SELECT email, password FROM register WHERE email = :email");
+            $email = $_POST["email"];
+            $req = $db->prepare("SELECT id, email, password FROM User WHERE email = :email AND password = password");
             $req-> execute(array(
                 "email" => $email));
-
             $resultat = $req->fetch();
 
-            if (!$resultat($_POST["password"], $resultat["password"]))  
-            {
-                echo "email ou mot de passe incorrect.<br/>";
+             // dans le if
+            if (password_verify($_POST["password"], $resultat["password"]))  {
+              echo "Vous êtes connecté !<br/>";
+
+
+              $_SESSION["user"] = $resultat["id"];
+
+              header("Location: home.php");
+
+              // session
+
+          }
+          $req->closeCursor();
             }
             else
             {
-                echo "Vous êtes connecté !<br/>";
-            }
-            $req->closeCursor();
-        }
-        else
-        {
-            echo "Renseignez un email et un mot de passe.<br/>";
-        }
+              echo "Email ou mot de passe incorrect.<br/>";
+        } 
     }
 
 ?>

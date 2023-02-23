@@ -1,5 +1,5 @@
 body {
-  background-color: lightcoral;
+  background-color: rgb(11, 11, 11);
   font-family: "Atyp Display";
   margin: 0;
   overflow-x: hidden;
@@ -18,8 +18,14 @@ body {
   padding: 10px 30px;
 }
 
+.body-left {
+  display: flex;
+  justify-content: center;
+  margin-top: 10px;
+}
+
 .edit {
-  display: block;
+  display: flex;
   text-decoration: none;
   border: 1px solid rgb(255, 255, 255);
   color: white;
@@ -46,21 +52,7 @@ textarea {
 
 
 .total {
-  display: flex;
   color: white;
-  border: 1px solid red;
-}
-
-.body-left {
-  display: flex;
-  border: 1px solid blue;
-  width: 14%;
-}
-
-.body-right {
-  display: flex;
-  border: 1px solid orange;
-  width: 85%;
 }
 
 
@@ -87,7 +79,7 @@ textarea {
 .pp {
   display: flex;
   justify-content: center;
-  /* border: 1px solid red; */
+  border: 1px solid red;
   width: 10%;
 }
 

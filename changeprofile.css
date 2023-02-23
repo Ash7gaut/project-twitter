@@ -1,0 +1,55 @@
+body {
+  margin: 0;
+  background-color: black;
+  font-family: "Montserrat";
+}
+
+h1 {
+  display: flex;
+  justify-content: center;
+  color: white;
+}
+
+ul {
+  list-style-type: none;
+}
+
+.form {
+  display: flex;
+  margin: auto;
+  max-width: 500px;
+  background-color: rgb(45, 45, 45);
+  justify-content: center;
+  border-radius: 20px;
+}
+
+.form p {
+  display: flex;
+  color: white;
+  justify-content: center;
+  margin-right: 50px;
+  font-size: 18px;
+}
+
+.file {
+  background-color: rgb(45, 45, 45);
+}
+
+input {
+  display: flex;
+  margin: auto;
+  border: 0;
+  width: 300px;
+  height: 30px;
+  background-color: rgb(143, 142, 142);
+  border-radius: 10px;
+  margin-right: 50px;
+}
+
+.change {
+  display: flex;
+  margin: auto;
+  margin-top: 20px;
+  max-width: 85px;
+  font-size: 20px;
+}

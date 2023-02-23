@@ -13,14 +13,18 @@ if(isset($_POST["email"], $_POST["password"])) {
         catch(Exception $e) {
             die('Erreur : '.$e->getMessage());
         }
+
+        $hashPassword = password_hash($_POST["password"], PASSWORD_DEFAULT);
+
         $query = "INSERT INTO User(email, password) VALUES (:email, :password);";
 
         try {
           $q = $db->prepare($query);
 
-          $q->bindParam(":email", $email);
-          $q->bindParam(":password", $password);
+          $q->bindParam(":email", $_POST["email"]);
+          $q->bindParam(":password", $hashPassword);
           $q->execute();
+
 
           header('Location: login.php');
           
