@@ -24,11 +24,12 @@ catch(Exception $e) {
         if (isset($_POST["tweet"])) {
           echo "tu essaies de tweeter " . $_POST["tweet"];
 
-          $query = "INSERT INTO tweets(content) VALUES (:content)";
+          $query = "INSERT INTO tweets(content, user_id) VALUES (:content, :user_id) WHERE user_id = :id";
           try {
             $q = $db->prepare($query);
   
             $q->bindParam(":content", $_POST["tweet"]);
+            $q->bindParam(":id", $_SESSION["user"]);
 
             $q->execute();
               
@@ -85,7 +86,7 @@ catch(Exception $e) {
           <div class="body-right">
               <div class="whats-new">
                 <div class="pp">
-                  <img class="user-pp" src="">
+                  <img class="user-pp" src="http://localhost:8888/twitter/upload/<?= $user['profilePicture'] ?>">
                 </div> 
                 <div class="content">
                 <form action="home.php" method="post">

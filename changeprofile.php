@@ -24,6 +24,32 @@ catch(Exception $e) {
 }
 
 if (!empty($_POST)) {
+    $file_name = '';
+    var_dump($_FILES['profilePicture']);
+    if (isset($_FILES['profilePicture'])) {
+
+      $tmp_name = $_FILES['profilePicture']['tmp_name'];
+
+      $file_extension = strrchr($_FILES['profilePicture']['type'], "/");
+      $file_extension = str_replace("/", ".", $file_extension);
+
+      $file_name = date("ymdhs") . $file_extension;
+      $folder = './upload/';
+
+      if(!isset($error)) {
+          if(move_uploaded_file($tmp_name, $folder . $file_name)) {
+              echo "C'est réussi !";
+          }
+          else {
+              echo "Ah...il semblerait que ça ne se passe pas comme prévu..";
+          }
+      }
+      else {
+          echo '<div>' . $error . '</div>';
+      }
+  }
+
+
     $sql = "UPDATE User SET name = :name, username = :username, biography = :biography, localisation = :localisation, profilePicture = :profilePicture, banner = :banner, email = :email, password = :password WHERE id = :id";
     
     $q = $db->prepare($sql);
@@ -32,7 +58,7 @@ if (!empty($_POST)) {
     $username = $_POST['username'];
     $biography = $_POST['biography'];
     $localisation = $_POST['localisation'];
-    $profilePicture = $_POST['profilePicture'];
+    $profilePicture = $file_name;
     $banner = $_POST['banner'];
     $email = $_POST['email'];
 
@@ -53,7 +79,6 @@ if (!empty($_POST)) {
     $q->execute();
 
     // $statement->execute(compact('id', 'name', 'username', 'biography', 'localisation', 'profilePicture', 'banner', 'email', 'password'));
-
 }
 
 $sql = "SELECT id, name, username, biography, localisation, profilePicture, banner, email, password FROM User WHERE id = :id";
@@ -85,7 +110,7 @@ $user = $q->fetch();
 </head>
 <body>
   <h1>Change Profile</h1>
-  <form action='' method='post'>
+  <form action='' method='post' enctype="multipart/form-data">
 
     <div class="form">
       <ul>
@@ -104,8 +129,6 @@ $user = $q->fetch();
             <input type="file" style="background-color: rgb(45, 45, 45)" background-color: rgb(45, 45, 45) value="<?= $user['banner']; ?>" name="banner" />
             <p>Email</p>
             <input type="text" value="<?= $user['email']; ?>" name="email" />
-            <p>Password</p>
-            <input type="text" name="password" />
             <div><input class="change "type='submit' value='Modifier'/></div>
           </li>
       </ul>

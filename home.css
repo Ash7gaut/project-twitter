@@ -48,7 +48,6 @@ textarea {
 .total {
   display: flex;
   color: white;
-  border: 1px solid red;
 }
 
 .body-left {
@@ -87,7 +86,6 @@ textarea {
 .pp {
   display: flex;
   justify-content: center;
-  /* border: 1px solid red; */
   width: 10%;
 }
 
@@ -132,6 +130,8 @@ textarea {
   justify-content: space-between;
   max-width: 470px;
   align-items: flex-end;
+  margin-top: 80px;
+  margin-left: 30px;
 }
 
 .icon .comments,
